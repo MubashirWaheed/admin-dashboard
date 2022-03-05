@@ -68,17 +68,71 @@ body {
 }
 
 header {
-  background-color: lightpink;
+  background-color: white;
+  /* background-color: lightpink; */
   border: 1px solid black;
 }
-
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
+.top-1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0px 0px 0px;
+}
+.top-1 > input {
+  outline: none;
+  border: 1px solid #f5f5f5;
+  border-radius: 13px;
+  padding: 5px 10px;
+  background-color: rgb(226, 232, 240);
+}
+.top-1 > div {
+  display: flex;
+  align-items: center;
+  padding-right: 15px;
+  /* border: 1px solid black; */
+}
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0px 0px 0px 10px;
+}
+.top-2-mobile {
+  display: flex;
+  align-items: center;
+  margin: 10px 30px 0px 0px;
+  /* border: 1px solid red; */
+}
+.top-2-desktop {
+  display: none;
+}
+
 .content {
+  background-color: rgb(226, 232, 240);
+  /* background-color: rgb(253, 197, 205); */
+  text-align: start;
+  padding-left: 20px;
+  margin-left: 10px;
+  border: 1px solid rebeccapurple;
+}
+.content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.card {
+  text-align: center;
   background-color: white;
+  border: 1px solid black;
 }
 
 /* DESKTOP */
@@ -109,5 +163,64 @@ header {
   }
   .top {
     border: 1px solid black;
+  }
+  .search {
+    width: 30%;
+  }
+  .top-2-mobile {
+    display: none;
+  }
+  .top-2-desktop {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px;
+    /* padding-top: 20px; */
+  }
+  .desktop-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  .user {
+    display: flex;
+  }
+  .greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .greeting > p {
+    font-weight: 700;
+  }
+  .top-2-desktop > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blue; */
+  }
+  .top-2-desktop > ul > li {
+    padding: 5px 20px;
+    background-color: rgb(26, 146, 212);
+    margin: 0px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+  .top-2-desktop > ul > li a {
+    color: white;
+  }
+
+  /* CONTENT */
+  .content {
+    margin-left: 300px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .top-2-desktop > ul {
+    display: none;
   }
 }
