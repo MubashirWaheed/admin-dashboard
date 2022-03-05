@@ -16,6 +16,7 @@ li {
 body {
   background-color: rgb(226, 232, 240);
 }
+
 /* SIDEBAR */
 .sidebar {
   background-color: rgb(26, 146, 212);
@@ -24,15 +25,15 @@ body {
   height: 100%;
   right: -500px;
   color: white;
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr; */
+}
+.wrapper {
+  margin: 20px 0px 0px 15px;
 }
 .sidebar-toggle {
   left: 0;
-  width: 50%;
+  width: 60%;
 }
 .sidebar-top {
-  border: 1px solid orange;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -41,14 +42,29 @@ body {
   display: flex;
   align-items: center;
 }
-ul > li {
-  padding: 10px 5px;
-  /* background-color: lightgray; */
+.sidebar-top-left > svg {
+  width: 24px;
+  height: 24px;
 }
-ul > li > a {
+.sidebar-top-left > h2 {
+  margin-left: 10px;
+}
+.close {
+  margin-right: 10px;
+}
+.nav-ul {
+  margin-top: 20px;
+}
+.nav-ul > li {
+  padding: 10px 5px;
+  display: flex;
+  align-items: center;
+}
+.nav-ul > li > a {
   color: white;
   font-size: 23px;
-  font-weight: 700;
+  font-weight: 500;
+  margin-left: 10px;
 }
 
 header {
@@ -76,6 +92,14 @@ header {
     left: 0;
     height: 100%;
     max-width: 300px;
+  }
+  .sidebar-top-left > svg {
+    width: 40px;
+    height: 40px;
+  }
+  .sidebar-top-left > h2 {
+    font-size: 34px;
+    margin-left: 10px;
   }
   .menu {
     display: none;
