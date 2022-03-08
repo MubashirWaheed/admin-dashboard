@@ -116,17 +116,30 @@ header {
 
 .content {
   background-color: rgb(226, 232, 240);
+  /* height: 100%; */
   /* background-color: rgb(253, 197, 205); */
   text-align: start;
   padding-left: 20px;
   margin-left: 10px;
   border: 1px solid rebeccapurple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.test {
+  width: 100%;
+  border: 1px solid orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .content-wrapper {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-columns: repeat(auto-fit, min(400px, 100%));
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   gap: 20px;
 }
 .card {
@@ -134,9 +147,28 @@ header {
   background-color: white;
   border: 1px solid black;
 }
-
+.aside {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  /* max-width: 300px; */
+}
+.aside-wrapper {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, min(200px, 100%));
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid darkcyan; */
+}
+.aside-1 {
+  /* border: 1px solid rebeccapurple; */
+}
+.aside-2 {
+  /* border: 2px solid black; */
+}
 /* DESKTOP */
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   header {
     margin-left: 300px;
     padding-left: 20px;
@@ -216,6 +248,10 @@ header {
   /* CONTENT */
   .content {
     margin-left: 300px;
+    flex-direction: row;
+  }
+  .aside {
+    border: 1px solid red;
   }
 }
 
