@@ -3,9 +3,9 @@ const menu = document.querySelector('.menu');
 const closeSvg = document.querySelector('.close');
 
 menu.addEventListener("click",()=>{
-    sidebar.classList.add('sidebar-toggle')
+    sidebar.style.width= '60%'
 })
 
 closeSvg.addEventListener('click',()=>{
-    sidebar.classList.remove('sidebar-toggle');
+    sidebar.style.removeProperty("width");
 })
